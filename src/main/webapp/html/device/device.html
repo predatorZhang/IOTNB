@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="../../css/console.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .global-logo .logo {
+            background-image: url('../../images/logo.svg');
+            background-size: 146px;
+        }
+
+        .global-logo .logo.en {
+            background-image: url('../../images/logo.svg');
+        }
+    </style>
+</head>
+<div class="modal-ready">
+    <div class="container">
+        <div class="viewport" id="console">
+            <div class="nav-global" style="">
+                <div>
+                    <div class="global-logo"><a class="logo" href="" data-permalink=""></a></div>
+
+                    <div class="items-inner">
+                        <div class="global-toggle sidebar-toggler"><a class="fa fa-nav-toggle show" href="#"></a></div>
+
+                        <ul class="global-items">
+                            <!--  <li class="nav-item"><a class="nav-item-inner mobile-app" href="">
+                                  <span class="with-animation fa fa-app"></span>
+                                  <span class="nav-text">App</span></a>
+                              </li>-->
+                            <li class="nav-item">
+                                <a class="nav-item-inner" href="#">
+                                    <span class="fa fa-notifications fa-has-unread"></span>
+                                    <span class="nav-text">消息中心</span></a>
+                                <ul class="dropdown-menu" style="display: none;">
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-item-inner" href="#">
+                                    <span class="fa fa-tickets"></span>
+                                    <span class="nav-text">工单</span>
+                                </a>
+                                <ul class="dropdown-menu" style="display: none;"></ul>
+                            </li>
+
+                            <li class="nav-item nav-item-help">
+                                <a class="nav-item-inner nav-item-inner-help" href="#">
+                                    <span class="fa fa-help"></span>
+                                    <span class="nav-text">帮助</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-help" style="display: none;">
+                                    <div class="dropdown-menu-inner">
+                                        <ul>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="https://docs.qingcloud.com/guide/index.html"><span
+                                                    class="fa fa-guide"></span>用户指南</a></li>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="https://www.qingcloud.com/icp"><span
+                                                    class="fa fa-icp"></span>ICP备案</a></li>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="https://docs.qingcloud.com/faq/index.html"><span
+                                                    class="fa fa-faq"></span>常见问题</a></li>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="https://docs.qingcloud.com/api/index.html"><span
+                                                    class="fa fa-api"></span>API Docs</a></li>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="https://docs.qingcloud.com/cli/index.html"><span
+                                                    class="fa fa-cli"></span>CLI Docs</a></li>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="https://docs.qingcloud.com/sdk/index.html"><span
+                                                    class="fa fa-sdk"></span>SDK Docs</a></li>
+                                        </ul>
+                                        <div class="pipe"></div>
+                                        <ul>
+                                            <li class="dropdown-menu-item"><a target="_blank"
+                                                                              href="http://status.qingcloud.com/"><span
+                                                    class="fa fa-service_health"></span>服务健康状态</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </li>
+
+
+                            <li class="nav-item nav-item-profile">
+                                <a class="nav-item-inner" href="#">
+                            <span class="user-avatar" href="#"
+                                  style="background-image: url('https://secure.gravatar.com/avatar/0e1db49630b504baa32acc71992fd388?s=80&amp;d=')"
+                                  target="_blank"></span>
+                                    <span class="user-name">344486139</span><span class="user-verify-new-dot"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-profile" style="display: none;">
+                                    <div class="dropdown-menu-inner">
+                                        <ul>
+
+                                            <li class="dropdown-menu-item">
+                                                <a href="https://console.qingcloud.com/account/profile/basic/"
+                                                   data-permalink="">
+                                                    <span class="fa fa-settings"></span>账户信息
+                                                    <span class="user-verify-new-dot"></span>
+                                                </a>
+                                            </li>
+
+                                            <li class="dropdown-menu-item">
+                                                <a href="" data-permalink="">
+                                                    <span class="fa fa-lock"></span>账户安全
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="pipe"></div>
+
+                                        <ul>
+                                            <li class="dropdown-menu-item">
+                                                <a class="logout" href="">
+                                                    <span class="fa fa-logout"></span>登出
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--最近操作-->
+                            <li class="nav-item nav-item-activities">
+                                <a class="nav-item-inner" href="#">
+                                    <span class="fa fa-activities"></span>
+                                </a>
+
+                                <div class="zone-activities" style="display: none;">
+                                    <div class="activities-inner"><h4 class="activities-title">最近操作
+                                        <a href="" data-permalink="">查看全部</a></h4>
+                                        <ol class="activities-items">
+                                            <li>
+                                                <span class="job-status successful"></span>
+                                                <div class="job-details">
+                                                    <a class="job-action" href="#" data-job-action="ApplySecurityGroup">应用防火墙规则</a><span
+                                                        class="consumed">1秒</span><span
+                                                        class="job-time">2015-07-19 13:26:46</span>
+                                                    <ul class="resources">
+                                                        <li>防火墙 :
+                                                            <a class="id" href=""
+                                                               data-permalink="">缺省防火墙</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-zone show" style="">
+                <div class="nav-zone-inner">
+                    <div class="zone-items page-sidebar nav-collapse collapse"><!--todo list-->
+                        <h5>宁波智慧管网</h5>
+                        <ul class="level-1 page-sidebar-menu">
+                            <li class="cate no-items overview">
+                                <a href="../../overview3.html" data-permalink="">
+                                    <span class="fa fa-overview"></span>
+                                    <span class="text">总览</span>
+                                </a>
+                            </li>
+
+                            <li class="cate no-items computing_networks selected">
+                                <a href="device.html">
+                                    <span class="fa fa-computing_networks"></span>
+                                    <span class="text">设备管理</span>
+                                </a>
+
+                            </li>
+
+                            <li class="cate no-items storage">
+                                <a href="../alarm/alarm.html"><span class="fa fa-alarms"></span>
+                                    <span class="text">报警策略</span>
+                                </a>
+                            </li>
+
+                            <li class="cate no-items security">
+                                <a href="../person/person.html"><span class="fa fa-subusers"></span>
+                                    <span class="text">人员管理</span>
+                                </a>
+                            </li>
+                            <li class="cate no-items security">
+                                <a href="../log/log.html"><span class="fa fa-logs"></span>
+                                    <span class="text">日志管理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="">
+                <div class="wrapper page">
+
+                    <div class="topbar">
+                        <div class="breadcrumbs">
+                            <a class="level level-zone level-zone-0 pek2" href="#" data-permalink="">设备管理</a>
+                            <a class="level  vxnets" href="#" data-permalink="">设备信息展示</a>
+                        </div>
+                    </div>
+
+                    <div class="page-intro vxnets">
+                        <p class="lead">
+                            <em>设备信息展示</em>
+                        </p>
+                    </div>
+
+                    <div class="pane">
+                        <div class="toolbar table-toolbar">
+
+                            <a class="btn" href="#">
+                                <span class="icon icon-refresh"></span>
+                            </a>
+
+                            <a class="btn" href="addDevice.html">
+                                <span class="icon icon-create"></span>
+                                <span class="text">新增</span>
+                            </a>
+
+                            <div class="dropdown btn-disabled">
+
+                                <input class="dropdown-toggle" type="text">
+
+                                <div class="dropdown-text">
+                                    <span class="icon icon-more"></span>
+                                    <span class="text">更多操作</span>
+                                </div>
+
+                                <div class="dropdown-content">
+                                    <a class="btn" href="#">
+                                        <span class="icon icon-edit"></span>
+                                        <span class="text">编辑</span>
+                                    </a>
+                                    <a class="btn" href="#">
+                                        <span class="icon icon-pause"></span>
+                                        <span class="text">停用</span>
+                                    </a>
+                                    <a class="btn" href="#">
+                                        <span class="icon icon-play"></span>
+                                        <span class="text">启动</span>
+                                    </a>
+
+                                    <a class="btn btn-danger" href="#">
+                                        <span class="icon icon-delete"></span>
+                                        <span class="text">删除</span>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="form-search"><input placeholder=" " type="search"></div>
+
+                            <div class="pagination">
+                                <span class="pages">合计 : 1&nbsp;&nbsp;</span><span class="per-page">每页:&nbsp;</span>
+                                <div class="select-con" style="width: 80px;">
+                                    <select class="dropdown-select" name="limit">
+                                        <option value="10" selected="">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                                <span class="pages" id="totalPages">页数 1 / 3</span>
+
+                                <a class="btn prev btn-forbidden" data-direction="prev">
+                                    <span class="icon-prev" data-direction="prev"></span>
+                                </a>
+
+                                <a class="btn next btn-" data-direction="next">
+                                    <span class="icon-next" data-direction="next"></span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <table class="table table-bordered table-hover vxnets" id="zhangfan">
+                            <thead>
+                                                     <!--   <tr>
+                                                            <th class="checkbox"><input type="checkbox"></th>
+                                                            <th class="sortable" data-key="vxnet_id">设备编码<span class="icon-sort"></span></th>
+                                                            <th class="sortable" data-key="vxnet_name">设备名称<span class="icon-sort"></span></th>
+                                                            <th class="sortable" data-key="vxnet_type">设备类型
+                                                                <div class="dropdown"><input class="dropdown-toggle" type="text">
+                                                                    <div class="dropdown-text"></div>
+                                                                    <div class="dropdown-content">
+                                                                        <a href="#" data-filter="vxnet_type" data-vxnet_type="0,1,2">全部</a>
+                                                                        <a href="#" data-filter="vxnet_type" data-vxnet_type="0">液位监测仪</a>
+                                                                        <a href="#" data-filter="vxnet_type" data-vxnet_type="1">压力监测仪</a>
+                                                                        <a href="#" data-filter="vxnet_type" data-vxnet_type="2">流量监测仪</a>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="icon-sort"></span>
+                                                            </th>
+
+                                                            <th>运行状态</th>
+                                                            <th>激活时间</th>
+                                                            <th class="sortable sort-reverse" data-key="create_time">报备时间
+                                                                <span class="icon-sort"></span>
+                                                            </th>
+                                                            <th>所属公司</th>
+                                                            <th>详情</th>
+                                                        </tr>-->
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>服务名称</th>
+
+                                <th>服务URL</th>
+
+                                <th>服务URL</th>
+
+                                <th>地图区域</th>
+
+                                <th>注册日期</th>
+
+                                <th>编辑</th>
+
+                                <th>删除</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                               <!-- <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>A0001</td>
+                                    <td>液位监测仪001</td>
+                                    <td>液位监测仪</td>
+                                    <td class="running"><span class="icon-status icon-faulty"></span>&nbsp; 运行中</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>C0001</td>
+                                    <td>压力监测仪001</td>
+                                    <td>压力监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"></td>
+                                    <td>B0001</td>
+                                    <td>噪声监测仪001</td>
+                                    <td>噪声监测仪</td>
+                                    <td class="running"><span class="icon-status icon-failed"></span>&nbsp; 失败</td>
+                                    <td>2017-05-03</td>
+                                    <td>2017-05-04</td>
+                                    <td>宁波航天</td>
+                                    <td><a href='/IOT_DEMO/html/device/detail.html'>详情</a></td>
+                                </tr>-->
+                            </tbody>
+                            <tfoot></tfoot>
+                        </table>
+
+                        <div style="display: none;"><p class="loading">正在加载...</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="notify" style=""></div>
+            <div class="loading-overlay" style="display: none"></div>
+            <div class="account-lock" style="display:none"></div>
+        </div>
+    </div>
+
+
+    <div class="eip contextmenu" style="display: none">
+        <a class="" href="#">
+            <span class="icon icon-create"></span>
+            <span class="text">新增</span>
+        </a>
+        <a class="" href="#">
+            <span class="icon icon-edit"></span>
+            <span class="text">编辑</span>
+        </a>
+        <a class="" href="#">
+            <span class="icon icon-pause"></span>
+            <span class="text">停用</span>
+        </a>
+        <a class="" href="#">
+            <span class="icon icon-play"></span>
+            <span class="text">启动</span>
+        </a>
+        <a class="" href="#">
+            <span class="icon icon-delete"></span>
+            <span class="text">删除</span>
+        </a>
+    </div>
+
+    <script type="text/javascript" src="../../js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/app.js"></script>
+    <script type="text/javascript" src="../../js/mouseDown.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../../js/datatable-wrapper.js"></script>
+
+
+
+    <script>
+        $(function () {
+            App.init();
+            MouseDown.init();
+            $(".nav-item-help").mouseover(function () {
+                $(".dropdown-menu-help").show();
+            });
+
+            $(".nav-item-help").mouseout(function () {
+                $(".dropdown-menu-help").hide();
+            });
+
+            $(".nav-item-profile").mouseover(function () {
+                $(".dropdown-menu-profile").show();
+            });
+
+            $(".nav-item-profile").mouseout(function () {
+                $(".dropdown-menu-profile").hide();
+            });
+
+            $(".nav-item-activities").mouseover(function () {
+                $(".zone-activities").show();
+            });
+
+            $(".nav-item-activities").mouseout(function () {
+                $(".zone-activities").hide();
+            });
+
+            //TODO LIST:获取表格数据
+            var callback = function (data) {
+/*
+                alert("callback method invoke");
+*/
+            };
+            var options = {
+                "sAjaxSource": "http://localhost:8080/ctrl/service/service-info-list.do", //TODO LIST:修改成对应的后台Controller地址
+                "aoColumns": [{
+                    "mDataProp": "id"
+                }, {
+                    "mDataProp": "serviceName"
+                }, {
+                    "mDataProp": "url"
+                }, {
+                    "mDataProp": "urlLink"
+                }, {
+                    "mDataProp": "descn"
+                }, {
+                    "mDataProp": "regDay"
+                }, {
+                    "mDataProp": "btnEdit"
+                }, {
+                    "mDataProp": "btnDelete"
+                }],
+                "aoColumnDefs": [{
+                    'bVisible': false,
+                    'aTargets': [0, 2, 4]
+                }, {
+                    'bSortable': false,
+                    'aTargets': [1, 3, 5, 6, 7]
+                }],
+                "callback":callback
+            };
+            var table = datatableWrapper.init($('#zhangfan'), options);
+            //TODO LIST:
+            $('#zhangfan a.red').live('click', function (e) {
+                e.preventDefault();
+                var nRow = $(this).parents('tr')[0];
+                var aData = table.fnGetData(nRow);
+                var id = aData.id;
+            });
+        });
+    </script>
+    </body>
+</div>
+</html>

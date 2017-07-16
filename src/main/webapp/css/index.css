@@ -1,0 +1,141 @@
+.echart {
+    margin: 4px;
+    margin-right: 0px;
+    padding: 5px;
+    margin-top: 15px !important;
+    padding-top: 10px !important;
+    display: block;
+    border: 1px;
+    width: 32%;
+    height: 50% !important;
+    background-color: white;
+    float: left;
+}
+
+.datepickerPanel {
+    display: inline-block;
+    zoom: 1;
+    width: 230px;
+    border: 1px solid #b4b4b4;
+    text-align: right;
+    position: relative;
+    float: right;
+    margin-left: 10px;
+}
+
+.custom1 {
+    width: 137px;
+    background: #FDFDFD;
+    border: 1px solid #b4b4b4;
+    -moz-box-shadow: inset 2px 2px 5px #EAEAEA;
+    -webkit-box-shadow: inset 2px 2px 5px #EAEAEA;
+    box-shadow: inset 2px 2px 5px #EAEAEA;
+    overflow: hidden;
+}
+
+.borders {
+    height: 28px;
+    line-height: 28px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.btnstyle {
+    /*display:inline;*/
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px;
+    border-left: 1px solid #fff;
+    display: inline-block;
+    padding: 0 14px;
+    border-right: 1px solid #B4B4B4;
+    cursor: pointer;
+    background: url(./images/backg2.png) 0 -120px repeat-x;
+}
+
+.condition{
+    display: block;
+    height: 50px;
+}
+.condition li.active {
+    background: url(./images/backg2.png) 0 1px repeat-x;
+}
+
+.condition ul {
+    margin-left: 1px;
+    margin-right: 1px;
+    display: inline-block;
+    border: 1px solid #B4B4B4;
+    font-size: 0;
+    margin-bottom: 5px;
+}
+.condition select {
+    margin-left: 1px;
+    width: 120px;
+    margin-right: 1px;
+    height: 28px;
+    line-height: 28px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.blank-area {
+    height: 28px;
+    width: 310px;
+}
+
+.dashboard-date-range {
+    /*
+                display: none;
+    */
+    margin-bottom: 5px;
+    cursor: pointer;
+!important;
+    /*  padding-top: -8px;
+      margin-right: 0px;
+      margin-top: -8px;*/
+    padding: 3px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    /*
+                padding-bottom: 7px;
+    */
+    float: right;
+!important;
+    color: #fff;
+    background-color: #e02222;
+}
+
+.dashboard-date-range span {
+    padding: 1px;
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.dashboard-date-range .icon-calendar {
+    text-transform: normal;
+    color: #fff;
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+.dashboard-date-range span {
+    /*
+                font-weight: normal;
+    */
+    font-size: 12px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.dashboard-date-range .icon-angle-down {
+    color: #fff;
+    font-size: 16px;
+}

@@ -1,0 +1,22 @@
+<% if(message.length==0){ %>
+无操作记录
+<% }else{ %>
+<% for(var i=0; i<=message.length-1; i++){
+var o = message[i];
+%>
+<li>
+    <span class="job-status successful"></span>
+    <div class="job-details">
+        <a class="job-action" href="#" data-job-action="ApplySecurityGroup"><%=o.content%></a><span
+            class="consumed"><%=o.consume%></span><span
+            class="job-time"><%=o.createTime%></span>
+        <ul class="resources">
+            <li><%=o.businessName%> :
+                <a class="id" href=""
+                   data-permalink=""><%=o.operationType%></a>
+            </li>
+        </ul>
+    </div>
+</li>
+<% } %>
+<% } %>
